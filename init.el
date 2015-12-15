@@ -18,7 +18,7 @@
 ;; ツールバーを表示しないようにする（Official Emacs の場合は 0）
 ; (tool-bar-mode 0)
 ;; スタートアップ画面を表示しないようにする
-(setq inhibit-startup-message t)
+;;(setq inhibit-startup-message t)
 ;; 行間隔を少し広げる
 ; (set-default 'line-spacing 4)
 ;; ウィンドウ（フレーム）のサイズ設定する
