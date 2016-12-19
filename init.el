@@ -1,3 +1,7 @@
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+(require 'pallet)
+
 (cond ((>= emacs-major-version 23)
 
 ;; 日本語の設定（UTF-8）
