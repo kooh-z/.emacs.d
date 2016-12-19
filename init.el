@@ -214,4 +214,4 @@ Runs the shell command defined by `tex-pdf-preview-command'."
 ;; メニューバー非表示
 (menu-bar-mode 0)
 ;; スクロールバー非表示
-(scroll-bar-mode 0)
+;;(scroll-bar-mode 0)
