@@ -28,9 +28,9 @@
 (require 'linum)
 (global-linum-mode 0)
 (global-set-key [f5] 'linum-mode)
-(setq linum-format 
-	(lambda (line) (propertize (format 
-		(let ((w (length (number-to-string 
+(setq linum-format
+	(lambda (line) (propertize (format
+		(let ((w (length (number-to-string
 			(count-lines (point-min) (point-max))
 		)))) (concat "%" (number-to-string w) "d "))
 	line) 'face 'linum)))
@@ -176,3 +176,15 @@ Runs the shell command defined by `tex-pdf-preview-command'."
 (add-hook 'rhtml-mode-hook
     (lambda () (rinari-launch)))
 
+(setq-default show-trailing-whitespace t)
+(set-face-background 'trailing-whitespace "#b14770")
+
+(require 'auto-complete)
+(require 'auto-complete-config)
+(global-auto-complete-mode t)
+
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(define-key ac-completing-map (kbd "C-m") 'ac-complete)
+
+(set-frame-parameter nil 'fullscreen 'maximized)
