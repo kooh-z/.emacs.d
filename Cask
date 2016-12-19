@@ -1,3 +1,6 @@
+(depends-on "graphene" "20141030.219")
+(depends-on "pallet" :git "https://github.com/rdallasgray/pallet" :ref "master")
+
 (source gnu)
 (source melpa)
 
