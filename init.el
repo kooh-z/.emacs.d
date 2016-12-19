@@ -200,7 +200,7 @@ Runs the shell command defined by `tex-pdf-preview-command'."
  '(minimap-window-location (quote right))
  '(package-selected-packages
    (quote
-    (sublime-themes ruby-electric ruby-block rinari rhtml-mode rbenv rake rails-log-mode neotree minimap go-mode flycheck-pos-tip enh-ruby-mode auto-highlight-symbol auto-complete-c-headers))))
+    (atom-dark-theme sublime-themes ruby-electric ruby-block rinari rhtml-mode rbenv rake rails-log-mode neotree minimap go-mode flycheck-pos-tip enh-ruby-mode auto-highlight-symbol auto-complete-c-headers))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -208,7 +208,7 @@ Runs the shell command defined by `tex-pdf-preview-command'."
  ;; If there is more than one, they won't work right.
  )
 
-(load-theme 'spolsky t)
+(load-theme 'atom-dark t)
 (setq inhibit-startup-message t)
 
 ;; ツールバー非表示
