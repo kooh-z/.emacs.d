@@ -148,6 +148,7 @@ Runs the shell command defined by `tex-pdf-preview-command'."
    '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
 
 (require 'minimap)
+(minimap-mode 1)
 
 ;; ruby
 (autoload 'ruby-mode "ruby-mode"
@@ -196,6 +197,7 @@ Runs the shell command defined by `tex-pdf-preview-command'."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+ '(minimap-window-location (quote right))
  '(package-selected-packages
    (quote
     (sublime-themes ruby-electric ruby-block rinari rhtml-mode rbenv rake rails-log-mode neotree minimap go-mode flycheck-pos-tip enh-ruby-mode auto-highlight-symbol auto-complete-c-headers))))
@@ -215,3 +217,19 @@ Runs the shell command defined by `tex-pdf-preview-command'."
 (menu-bar-mode 0)
 ;; スクロールバー非表示
 ;;(scroll-bar-mode 0)
+
+(global-set-key [f8] 'neotree-toggle)
+;; 隠しファイルをデフォルトで表示
+(setq neo-show-hidden-files t)
+
+;; neotree でファイルを新規作成した後、自動的にファイルを開く
+(setq neo-create-file-auto-open t)
+
+;; delete-other-window で neotree ウィンドウを消さない
+(setq neo-persist-show t)
+
+;; キーバインドをシンプルにする
+(setq neo-keymap-style 'concise)
+
+;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
+(setq neo-smart-open t)
