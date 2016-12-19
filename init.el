@@ -188,3 +188,30 @@ Runs the shell command defined by `tex-pdf-preview-command'."
 (define-key ac-completing-map (kbd "C-m") 'ac-complete)
 
 (set-frame-parameter nil 'fullscreen 'maximized)
+
+;; sublimeテーマ
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+ '(package-selected-packages
+   (quote
+    (sublime-themes ruby-electric ruby-block rinari rhtml-mode rbenv rake rails-log-mode neotree minimap go-mode flycheck-pos-tip enh-ruby-mode auto-highlight-symbol auto-complete-c-headers))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(load-theme 'spolsky t)
+(setq inhibit-startup-message t)
+
+;; ツールバー非表示
+;;(tool-bar-mode 0)
+;; メニューバー非表示
+(menu-bar-mode 0)
+;; スクロールバー非表示
+(scroll-bar-mode 0)
