@@ -2,6 +2,7 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 (show-paren-mode nil)
 (set-frame-parameter nil 'alpha '(90 70))
 (setq mac-mouse-wheel-smooth-scroll t)
@@ -200,7 +201,7 @@ Runs the shell command defined by `tex-pdf-preview-command'."
  '(minimap-window-location (quote right))
  '(package-selected-packages
    (quote
-    (atom-dark-theme sublime-themes ruby-electric ruby-block rinari rhtml-mode rbenv rake rails-log-mode neotree minimap go-mode flycheck-pos-tip enh-ruby-mode auto-highlight-symbol auto-complete-c-headers))))
+    (drill-instructor-AZIK-force markdown-mode+ markdown-preview-eww markdown-preview-mode markdown-mode git-gutter+ atom-dark-theme sublime-themes ruby-electric ruby-block rinari rhtml-mode rbenv rake rails-log-mode neotree minimap go-mode flycheck-pos-tip enh-ruby-mode auto-highlight-symbol auto-complete-c-headers))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -212,7 +213,7 @@ Runs the shell command defined by `tex-pdf-preview-command'."
 (setq inhibit-startup-message t)
 
 ;; ツールバー非表示
-;;(tool-bar-mode 0)
+(tool-bar-mode 0)
 ;; メニューバー非表示
 (menu-bar-mode 0)
 ;; スクロールバー非表示
@@ -229,7 +230,11 @@ Runs the shell command defined by `tex-pdf-preview-command'."
 (setq neo-persist-show t)
 
 ;; キーバインドをシンプルにする
-(setq neo-keymap-style 'concise)
+(setq ncaeo-keymap-style 'concise)
 
 ;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
 (setq neo-smart-open t)
+
+(global-git-gutter+-mode t)
+
+(setq markdown-command "multimarkdown")
